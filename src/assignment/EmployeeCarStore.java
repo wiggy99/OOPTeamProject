@@ -41,10 +41,7 @@ public class EmployeeCarStore {
     
      public static void updateEmployee(String id, String name, String gender, String DOB, String address, String phone, String phoneExtention, String userName, String password)
      {
-        for(Employee e :employees)
-        {
-            if(e.getId().equals(id))
-            {
+       Employee e = searchPersonByID(id);
                 e.setName(name);
                 e.setGender(gender);
                 e.setDateOfBirth(DOB);
@@ -52,8 +49,6 @@ public class EmployeeCarStore {
                 e.setPhone(phone);
                 e.setPhoneExtention(phoneExtention);
                 e.setUserName(userName);
-                e.setPassword(password);
-            }
-        }
+                e.setPassword(password); 
      }
 }

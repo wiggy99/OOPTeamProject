@@ -300,7 +300,13 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
         setControlsEditable(true);
-        employeeIDTextField.setEditable(false);
+       employeeIDTextField.setEditable(false);
+    }//GEN-LAST:event_updateButtonActionPerformed
+
+    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+        // TODO add your handling code here:
+        
+         
         String name = nameTextField.getText();
         String gender = genderTextField.getText();
         String DOB = DOBTextField.getText();
@@ -311,39 +317,6 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
         String password = passwordTextField.getText();
         EmployeeCarStore.updateEmployee(DOB, name, gender, DOB, address, phone, phoneExtention, userName, password);
         JOptionPane.showConfirmDialog(this, "Employee updated successfully");
-    }//GEN-LAST:event_updateButtonActionPerformed
-
-    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
-        // TODO add your handling code here:
-        
-        String id = employeeIDTextField.getText();
-        if(EmployeeCarStore.containsPerson(id))
-        {
-         JOptionPane.showMessageDialog(this, "Sorry we have ID with the same name");
-        }
-        else 
-        {
-            String name = nameTextField.getText();
-            String gender = genderTextField.getText();
-            String DOB = DOBTextField.getText();
-            String address = addressTextField.getText();
-            String phone = phoneTextField.getText();
-            String phoneExtention = phoneExtentionTextField.getText();
-            String userName = userNameTextField.getText();
-            String password = passwordTextField.getText();
-            Employee e = new Employee(phone, phoneExtention, userName, password, name, gender, DOB, address, phone);
-            EmployeeCarStore.employees.add(e);
-            JOptionPane.showMessageDialog(this, "Employee Saved");
-
-            employeeIDTextField.setText("");
-            nameTextField.setText("");
-            DOBTextField.setText("");
-            addressTextField.setText("");
-            phoneTextField.setText("");
-            phoneExtentionTextField.setText("");
-            userNameTextField.setText("");
-            passwordTextField.setText("");
-        }
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed

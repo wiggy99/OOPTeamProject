@@ -271,7 +271,20 @@ public class SearchAndUpdateCustomerIFrame extends javax.swing.JInternalFrame {
     private void searchCustomerIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchCustomerIDTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchCustomerIDTextFieldActionPerformed
-
+    private void setControlsEditable(boolean option)
+        {
+            customerIDTextField.setEditable(option);
+            nameTextField.setEditable(option);
+            genderTextField.setEditable(option);
+            DOBTextField.setEditable(option);
+            addressTextField.setEditable(option);
+            phoneTextField.setEditable(option);
+            licenceNumberTextField.setEditable(option);
+            licenceTypeComboBox.setEditable(option);
+            licenceExpiryTextField.setEditable(option);
+            
+            saveButton.setVisible(option);
+        }
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
         

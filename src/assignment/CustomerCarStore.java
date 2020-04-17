@@ -39,8 +39,18 @@ public class CustomerCarStore {
         return found;
     }
     
-    public static void updateCustomer
+    public static void updateCustomer(String id, String name, String gender, String DOB, String address, String phone, String licenceNumber, LicenceType licenceType, String licenceExpiry)
     {
+       Customer c = searchPersonByID(id);
+                c.setName(name);
+                c.setGender(gender);
+                c.setDateOfBirth(DOB);
+                c.setAddress(address);
+                c.setPhone(phone);
+                c.setLicenceNumber(licenceNumber);
+                c.setLicenceType(licenceType);
+                c.setLicenceExpiry(licenceNumber);
+        
         
     }
 }
