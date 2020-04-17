@@ -38,4 +38,22 @@ public class EmployeeCarStore {
         }
         return (Employee) found;
     }
+    
+     public static void updateEmployee(String id, String name, String gender, String DOB, String address, String phone, String phoneExtention, String userName, String password)
+     {
+        for(Employee e :employees)
+        {
+            if(e.getId().equals(id))
+            {
+                e.setName(name);
+                e.setGender(gender);
+                e.setDateOfBirth(DOB);
+                e.setAddress(address);
+                e.setPhone(phone);
+                e.setPhoneExtention(phoneExtention);
+                e.setUserName(userName);
+                e.setPassword(password);
+            }
+        }
+     }
 }

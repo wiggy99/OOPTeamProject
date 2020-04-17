@@ -53,11 +53,11 @@
                               </Group>
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="userNameTextField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="userNameTextField" alignment="0" pref="177" max="32767" attributes="0"/>
                                   <Component id="phoneExtentionTextField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="phoneTextField" alignment="0" max="32767" attributes="0"/>
                                   <Component id="addressTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="passwordTextField" alignment="0" min="-2" pref="177" max="-2" attributes="0"/>
+                                  <Component id="passwordTextField" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -207,8 +207,6 @@
         <Property name="text" type="java.lang.String" value="Password:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="passwordTextField">
-    </Component>
     <Component class="javax.swing.JButton" name="addButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="ADD"/>
@@ -218,6 +216,8 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="genderTextField">
+    </Component>
+    <Component class="javax.swing.JTextField" name="passwordTextField">
     </Component>
   </SubComponents>
 </Form>

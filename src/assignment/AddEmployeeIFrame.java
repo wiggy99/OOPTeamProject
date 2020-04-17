@@ -46,9 +46,9 @@ public class AddEmployeeIFrame extends javax.swing.JInternalFrame {
         jLabel10 = new javax.swing.JLabel();
         userNameTextField = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        passwordTextField = new javax.swing.JPasswordField();
         addButton = new javax.swing.JButton();
         genderTextField = new javax.swing.JTextField();
+        passwordTextField = new javax.swing.JTextField();
 
         setClosable(true);
         setTitle("Add Employee");
@@ -150,11 +150,11 @@ public class AddEmployeeIFrame extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(42, 42, 42)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(userNameTextField)
+                                    .addComponent(userNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
                                     .addComponent(phoneExtentionTextField)
                                     .addComponent(phoneTextField)
                                     .addComponent(addressTextField)
-                                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(passwordTextField)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(393, 393, 393)
                         .addComponent(addButton)))
@@ -286,7 +286,7 @@ public class AddEmployeeIFrame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField nameTextField;
-    private javax.swing.JPasswordField passwordTextField;
+    private javax.swing.JTextField passwordTextField;
     private javax.swing.JTextField phoneExtentionTextField;
     private javax.swing.JTextField phoneTextField;
     private javax.swing.JTextField userNameTextField;
