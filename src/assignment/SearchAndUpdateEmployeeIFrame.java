@@ -19,6 +19,7 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
      */
     public SearchAndUpdateEmployeeIFrame() {
         initComponents();
+        setControlsEditable(false);
     }
 
     /**
@@ -41,7 +42,6 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         employeeIDTextField = new javax.swing.JTextField();
-        passwordTextField = new javax.swing.JPasswordField();
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         addressTextField = new javax.swing.JTextField();
@@ -53,6 +53,7 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
         searchEmployeeIDTextField = new javax.swing.JTextField();
         searchButton = new javax.swing.JButton();
         genderTextField = new javax.swing.JTextField();
+        passwordTextField = new javax.swing.JTextField();
 
         setClosable(true);
         setTitle("Update Employee");
@@ -178,16 +179,16 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
+                                        .addGap(56, 56, 56)
+                                        .addComponent(saveButton))
+                                    .addGroup(layout.createSequentialGroup()
                                         .addGap(42, 42, 42)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(userNameTextField)
+                                            .addComponent(userNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
                                             .addComponent(phoneExtentionTextField)
                                             .addComponent(phoneTextField)
                                             .addComponent(addressTextField)
-                                            .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(56, 56, 56)
-                                        .addComponent(saveButton)))))
+                                            .addComponent(passwordTextField))))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -282,10 +283,34 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
     private void searchEmployeeIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchEmployeeIDTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchEmployeeIDTextFieldActionPerformed
-
+        private void setControlsEditable(boolean option)
+        {
+            employeeIDTextField.setEditable(option);
+            nameTextField.setEditable(option);
+            genderTextField.setEditable(option);
+            DOBTextField.setEditable(option);
+            addressTextField.setEditable(option);
+            phoneTextField.setEditable(option);
+            phoneExtentionTextField.setEditable(option);
+            userNameTextField.setEditable(option);
+            passwordTextField.setEditable(option);
+            saveButton.setVisible(option);
+        }
+    
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
-        
+        setControlsEditable(true);
+        employeeIDTextField.setEditable(false);
+        String name = nameTextField.getText();
+        String gender = genderTextField.getText();
+        String DOB = DOBTextField.getText();
+        String address = addressTextField.getText();
+        String phone = phoneTextField.getText();
+        String phoneExtention = phoneExtentionTextField.getText();
+        String userName = userNameTextField.getText();
+        String password = passwordTextField.getText();
+        EmployeeCarStore.updateEmployee(DOB, name, gender, DOB, address, phone, phoneExtention, userName, password);
+        JOptionPane.showConfirmDialog(this, "Employee updated successfully");
     }//GEN-LAST:event_updateButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
@@ -362,7 +387,7 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField nameTextField;
-    private javax.swing.JPasswordField passwordTextField;
+    private javax.swing.JTextField passwordTextField;
     private javax.swing.JTextField phoneExtentionTextField;
     private javax.swing.JTextField phoneTextField;
     private javax.swing.JButton saveButton;
