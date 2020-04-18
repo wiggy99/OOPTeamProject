@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class CustomerCarStore {
      public static ArrayList<Customer> customers = new ArrayList<Customer>();
-    public static boolean containsPerson(String id)
+    public static boolean containsCustomer(String id)
     {
         for (Customer c : customers)
         {
@@ -25,7 +25,7 @@ public class CustomerCarStore {
         return false;
     }
     
-    static public Customer searchPersonByID(String id)
+    static public Customer searchCustomerByID(String id)
     {
         Customer found = null;
         for (Customer c : customers)
@@ -41,16 +41,15 @@ public class CustomerCarStore {
     
     public static void updateCustomer(String id, String name, String gender, String DOB, String address, String phone, String licenceNumber, LicenceType licenceType, String licenceExpiry)
     {
-       Customer c = searchPersonByID(id);
+       Customer c = searchCustomerByID(id);
+                c.setLicenceNumber(licenceNumber);
+                c.setLicenceType(licenceType);
+                c.setLicenceExpiry(licenceExpiry);
                 c.setName(name);
                 c.setGender(gender);
                 c.setDateOfBirth(DOB);
                 c.setAddress(address);
                 c.setPhone(phone);
-                c.setLicenceNumber(licenceNumber);
-                c.setLicenceType(licenceType);
-                c.setLicenceExpiry(licenceNumber);
-        
         
     }
 }

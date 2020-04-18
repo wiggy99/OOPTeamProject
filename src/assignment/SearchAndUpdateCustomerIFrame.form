@@ -23,59 +23,57 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
-                          <Component id="jLabel7" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel3" alignment="0" pref="250" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="DOBTextField" alignment="0" pref="177" max="32767" attributes="0"/>
-                                  <Component id="nameTextField" alignment="0" pref="177" max="32767" attributes="0"/>
-                                  <Component id="customerIDTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="genderTextField" alignment="0" max="32767" attributes="0"/>
-                              </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel2" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
+                      <Component id="jLabel8" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
+                      <Component id="jLabel7" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jLabel3" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel10" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
-                                  <Component id="jLabel9" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
-                                  <Component id="jLabel11" alignment="0" min="-2" pref="202" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="licenceNumberTextField" alignment="0" pref="177" max="32767" attributes="0"/>
-                                  <Component id="phoneTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="addressTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="licenceExpiryTextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="licenceTypeComboBox" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" pref="240" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                              <Component id="searchCustomerIDTextField" min="-2" pref="177" max="-2" attributes="0"/>
-                              <EmptySpace pref="44" max="32767" attributes="0"/>
-                              <Component id="searchButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="DOBTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="nameTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="customerIDTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="genderTextField" alignment="0" min="-2" pref="177" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel10" alignment="0" min="-2" pref="168" max="-2" attributes="0"/>
+                              <Component id="jLabel9" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                              <Component id="jLabel11" alignment="0" min="-2" pref="202" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="licenceNumberTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="phoneTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="addressTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="licenceExpiryTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="licenceTypeComboBox" alignment="0" min="-2" pref="177" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+                          <Component id="updateButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="saveButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="321" max="-2" attributes="0"/>
-                      <Component id="updateButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      <Component id="saveButton" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel5" min="-2" pref="240" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="searchCustomerIDTextField" min="-2" pref="177" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace pref="68" max="32767" attributes="0"/>
+              <Component id="searchButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -89,7 +87,7 @@
                   <Component id="searchCustomerIDTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="searchButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="45" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   <Component id="customerIDTextField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -134,12 +132,12 @@
                   <Component id="jLabel11" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   <Component id="licenceExpiryTextField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="updateButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="saveButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="updateButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+              <EmptySpace pref="41" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -234,9 +232,9 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
-            <StringItem index="0" value="Learner"/>
-            <StringItem index="1" value="Restricted"/>
-            <StringItem index="2" value="Full"/>
+            <StringItem index="0" value="LEARNER"/>
+            <StringItem index="1" value="RESTRICTED"/>
+            <StringItem index="2" value="FULL"/>
           </StringArray>
         </Property>
       </Properties>

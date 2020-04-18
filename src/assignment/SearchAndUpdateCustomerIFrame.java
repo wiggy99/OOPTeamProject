@@ -19,6 +19,7 @@ public class SearchAndUpdateCustomerIFrame extends javax.swing.JInternalFrame {
      */
     public SearchAndUpdateCustomerIFrame() {
         initComponents();
+        setControlsEditable(false);
     }
 
     /**
@@ -118,7 +119,7 @@ public class SearchAndUpdateCustomerIFrame extends javax.swing.JInternalFrame {
 
         jLabel11.setText("Licence Expiry Date:");
 
-        licenceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Learner", "Restricted", "Full" }));
+        licenceTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LEARNER", "RESTRICTED", "FULL" }));
 
         saveButton.setText("SAVE");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
@@ -147,47 +148,46 @@ public class SearchAndUpdateCustomerIFrame extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(202, 202, 202)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(42, 42, 42)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(DOBTextField)
+                                .addComponent(nameTextField)
+                                .addComponent(customerIDTextField)
+                                .addComponent(genderTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(42, 42, 42)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(licenceNumberTextField)
+                                .addComponent(phoneTextField)
+                                .addComponent(addressTextField)
+                                .addComponent(licenceExpiryTextField)
+                                .addComponent(licenceTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(119, 119, 119)
+                            .addComponent(updateButton)
+                            .addGap(44, 44, 44)
+                            .addComponent(saveButton)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(202, 202, 202)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE))
-                                .addGap(42, 42, 42)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(DOBTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                                    .addComponent(nameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                                    .addComponent(customerIDTextField)
-                                    .addComponent(genderTextField)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(42, 42, 42)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(licenceNumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                                    .addComponent(phoneTextField)
-                                    .addComponent(addressTextField)
-                                    .addComponent(licenceExpiryTextField)
-                                    .addComponent(licenceTypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(52, 52, 52)
-                                .addComponent(searchCustomerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                                .addComponent(searchButton))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(321, 321, 321)
-                        .addComponent(updateButton)
-                        .addGap(46, 46, 46)
-                        .addComponent(saveButton)))
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(searchCustomerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addComponent(searchButton)
                 .addGap(160, 160, 160))
         );
         layout.setVerticalGroup(
@@ -198,7 +198,7 @@ public class SearchAndUpdateCustomerIFrame extends javax.swing.JInternalFrame {
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchCustomerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(customerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -234,11 +234,11 @@ public class SearchAndUpdateCustomerIFrame extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(licenceExpiryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(updateButton)
-                    .addComponent(saveButton))
-                .addGap(51, 51, 51))
+                    .addComponent(saveButton)
+                    .addComponent(updateButton))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -282,23 +282,16 @@ public class SearchAndUpdateCustomerIFrame extends javax.swing.JInternalFrame {
             licenceNumberTextField.setEditable(option);
             licenceTypeComboBox.setEditable(option);
             licenceExpiryTextField.setEditable(option);
-            
             saveButton.setVisible(option);
         }
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
-        
+       setControlsEditable(true);
     }//GEN-LAST:event_updateButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         // TODO add your handling code here:
-        String id = customerIDTextField.getText();
-        if(CustomerCarStore.containsPerson(id))
-        {
-         JOptionPane.showMessageDialog(this, "Sorry we have ID with the same name");
-        }
-        else
-        {
+            String id = customerIDTextField.getText();
             String name = nameTextField.getText();
             String gender = genderTextField.getText();
             String DOB = DOBTextField.getText();
@@ -306,18 +299,19 @@ public class SearchAndUpdateCustomerIFrame extends javax.swing.JInternalFrame {
             String phone = phoneTextField.getText();
             String licenceNumber = licenceNumberTextField.getText();
             String value = licenceTypeComboBox.getSelectedItem().toString();
-            LicenceType type = LicenceType.valueOf(value);
-            String licenceExpirary = licenceExpiryTextField.getText();
-            Customer c = new Customer(id, licenceNumber, type, licenceExpirary, name, gender, DOB, address, phone);
+            LicenceType licenceType = LicenceType.valueOf(value);
+            String licenceExpiry = licenceExpiryTextField.getText();
+            Customer c = new Customer(id, licenceNumber, licenceType, licenceExpiry, name, gender, DOB, address, phone);
             CustomerCarStore.customers.add(c);
-            JOptionPane.showMessageDialog(this, "Customer Saved");
-        }
+            JOptionPane.showMessageDialog(this, "Customer Saved");  
+        
+        
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
         String id = searchCustomerIDTextField.getText();
-        Customer c = CustomerCarStore.searchPersonByID(id);
+        Customer c = CustomerCarStore.searchCustomerByID(id);
         if(c == null)
         {
             JOptionPane.showMessageDialog(this, "sorry no customers found with this ID");
@@ -330,7 +324,7 @@ public class SearchAndUpdateCustomerIFrame extends javax.swing.JInternalFrame {
             addressTextField.setText(c.getAddress());
             phoneTextField.setText(c.getPhone());
             licenceNumberTextField.setText(c.getLicenceNumber());
-            //licenceTypeComboBox.setText(c.getLicenceType());
+            licenceTypeComboBox.getSelectedItem().toString();
             licenceExpiryTextField.setText(c.getLicenceExpiry());
         }
     }//GEN-LAST:event_searchButtonActionPerformed

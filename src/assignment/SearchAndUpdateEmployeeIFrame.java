@@ -171,16 +171,14 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
                                     .addComponent(employeeIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(genderTextField)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(updateButton)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(56, 56, 56)
-                                        .addComponent(saveButton))
+                                        .addGap(113, 113, 113)
+                                        .addComponent(updateButton)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(42, 42, 42)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -188,13 +186,16 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
                                             .addComponent(phoneExtentionTextField)
                                             .addComponent(phoneTextField)
                                             .addComponent(addressTextField)
-                                            .addComponent(passwordTextField))))))
+                                            .addComponent(passwordTextField)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addComponent(saveButton)))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(52, 52, 52)
                         .addComponent(searchEmployeeIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                         .addComponent(searchButton)
                         .addGap(94, 94, 94))))
         );
@@ -242,11 +243,11 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(saveButton)
-                    .addComponent(updateButton))
-                .addContainerGap())
+                    .addComponent(updateButton)
+                    .addComponent(saveButton))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         pack();
@@ -285,7 +286,7 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_searchEmployeeIDTextFieldActionPerformed
         private void setControlsEditable(boolean option)
         {
-            employeeIDTextField.setEditable(option);
+            employeeIDTextField.setEditable(false);
             nameTextField.setEditable(option);
             genderTextField.setEditable(option);
             DOBTextField.setEditable(option);
@@ -300,13 +301,11 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
         setControlsEditable(true);
-       employeeIDTextField.setEditable(false);
     }//GEN-LAST:event_updateButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         // TODO add your handling code here:
-        
-         
+        String id = employeeIDTextField.getText();
         String name = nameTextField.getText();
         String gender = genderTextField.getText();
         String DOB = DOBTextField.getText();
@@ -315,17 +314,17 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
         String phoneExtention = phoneExtentionTextField.getText();
         String userName = userNameTextField.getText();
         String password = passwordTextField.getText();
-        EmployeeCarStore.updateEmployee(DOB, name, gender, DOB, address, phone, phoneExtention, userName, password);
+        EmployeeCarStore.updateEmployee(id, name, gender, DOB, address, phone, phoneExtention, userName, password);
         JOptionPane.showConfirmDialog(this, "Employee updated successfully");
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
         String id = searchEmployeeIDTextField.getText();
-        Employee e = EmployeeCarStore.searchPersonByID(id);
+        Employee e = EmployeeCarStore.searchEmployeeByID(id);
         if(e == null)
         {
-            JOptionPane.showMessageDialog(this, "sorry no employee found with this ID");
+            JOptionPane.showMessageDialog(this, "sorry no employees found with this ID");
         }else
         {
             employeeIDTextField.setText(e.getId());
@@ -337,8 +336,6 @@ public class SearchAndUpdateEmployeeIFrame extends javax.swing.JInternalFrame {
             phoneExtentionTextField.setText(e.getPhoneExtention());
             userNameTextField.setText(e.getUserName());
             passwordTextField.setText(e.getPassword());
-            
-            
         }
         
     }//GEN-LAST:event_searchButtonActionPerformed

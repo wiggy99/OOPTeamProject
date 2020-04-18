@@ -27,6 +27,7 @@ public class MainForm extends javax.swing.JFrame {
     private void initComponents() {
 
         mainContentPane = new javax.swing.JDesktopPane();
+        jLabel5 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         addEmployeeMenuItem = new javax.swing.JMenuItem();
@@ -38,20 +39,33 @@ public class MainForm extends javax.swing.JFrame {
 
         mainContentPane.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assignment/race-car-309123_1280.png"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        jLabel5.setMaximumSize(new java.awt.Dimension(300, 300));
+        jLabel5.setMinimumSize(new java.awt.Dimension(300, 300));
+        jLabel5.setPreferredSize(new java.awt.Dimension(300, 300));
+
+        mainContentPane.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout mainContentPaneLayout = new javax.swing.GroupLayout(mainContentPane);
         mainContentPane.setLayout(mainContentPaneLayout);
         mainContentPaneLayout.setHorizontalGroup(
             mainContentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1174, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainContentPaneLayout.createSequentialGroup()
+                .addGap(0, 718, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         mainContentPaneLayout.setVerticalGroup(
             mainContentPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 709, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainContentPaneLayout.createSequentialGroup()
+                .addGap(0, 621, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jMenu1.setText("Customer and Employee Management");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 30)); // NOI18N
 
+        addEmployeeMenuItem.setFont(new java.awt.Font("Segoe UI", 0, 26)); // NOI18N
         addEmployeeMenuItem.setText("Add Employee");
         addEmployeeMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +74,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenu1.add(addEmployeeMenuItem);
 
+        searchAndUpdateEmployeeMenuItem.setFont(new java.awt.Font("Segoe UI", 0, 26)); // NOI18N
         searchAndUpdateEmployeeMenuItem.setText("Search and Update Employee");
         searchAndUpdateEmployeeMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +83,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenu1.add(searchAndUpdateEmployeeMenuItem);
 
+        searchAndUpdateCustomerMenuItem.setFont(new java.awt.Font("Segoe UI", 0, 26)); // NOI18N
         searchAndUpdateCustomerMenuItem.setText("Search and Update Customer");
         searchAndUpdateCustomerMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +92,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenu1.add(searchAndUpdateCustomerMenuItem);
 
+        newCustomerMenuItem.setFont(new java.awt.Font("Segoe UI", 0, 26)); // NOI18N
         newCustomerMenuItem.setText("New Customer Infomation");
         newCustomerMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,6 +195,7 @@ public class MainForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem addEmployeeMenuItem;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JDesktopPane mainContentPane;

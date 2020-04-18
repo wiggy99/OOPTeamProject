@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class EmployeeCarStore {
     public static ArrayList<Employee> employees = new ArrayList<Employee>();
-    public static boolean containsPerson(String id)
+    public static boolean containsEmployee(String id)
     {
         for (Employee e : employees)
         {
@@ -25,7 +25,7 @@ public class EmployeeCarStore {
         return false;
     }
     
-    static public Employee searchPersonByID(String id)
+    static public Employee searchEmployeeByID(String id)
     {
         Person found = null;
         for (Employee e : employees)
@@ -41,7 +41,7 @@ public class EmployeeCarStore {
     
      public static void updateEmployee(String id, String name, String gender, String DOB, String address, String phone, String phoneExtention, String userName, String password)
      {
-       Employee e = searchPersonByID(id);
+       Employee e = searchEmployeeByID(id);
                 e.setName(name);
                 e.setGender(gender);
                 e.setDateOfBirth(DOB);
